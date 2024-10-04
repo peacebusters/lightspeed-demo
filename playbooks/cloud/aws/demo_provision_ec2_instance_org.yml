@@ -1,0 +1,51 @@
+---
+- name: EC2 Cloud Operations
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  module_defaults:
+    group/aws:
+      region: us-east-1
+
+  vars:
+    my_instance:
+      name: instance-lightspeed-01
+      key_name: lightspeed-keypair
+      image_id: ami-016eb5d644c333ccb # RHEL 9 us-east-1
+      network:
+        assign_public_ip: true
+      tags:
+        function: demo-lightspeed
+      security_group: secgroup-lightspeed
+      wait: true
+
+  tasks:
+############################################## INSTRUCTIONS TASK 1 and 2 ##############################################
+# Press "ENTER" at the end of the multi-task prompt line just after this instructions block. DO NOT UNCOMMENT THE LINE.
+# Press "TAB" to accept suggestion.
+# Note - The suggestion used the Fully Qualified Collection Name (FQCN).
+# Note - The first task used the correct AWS tag "tag:Name" in the filter.
+# Note - The second task used the correct variable created in the previous task.
+#######################################################################################################################
+
+    # Get subnet-lightspeed info & create vpc_subnet_id var
+
+################################################# INSTRUCTIONS TASK 3 #################################################
+# Uncomment the line just after this instructions block and Press "ENTER" at the end.
+# Press "TAB" to accept suggestion.
+# Note - The suggestion used the "my_instance" variable declared in the "vars:" section.
+#######################################################################################################################
+
+    # - name: Create t3.small instance using my_instance var
+
+############################################## INSTRUCTIONS TASK 4 and 5 ##############################################
+# Press "ENTER" at the end of the multi-task prompt line just after this instructions block. DO NOT UNCOMMENT THE LINE.
+# Press "TAB" to accept suggestion.
+# Note - The suggestion used the correct variable from the previous task.
+# Note - The second task used the "public_ip_address" variable based on the previous task.
+# First task note - The suggestion used the correct variable from the previous task and integrated "retries".
+# Second task note - The suggestion used the "public_ip_address" variable based on the previous task.
+#######################################################################################################################
+
+    # Create var from public_ip_address with retry & print it out
