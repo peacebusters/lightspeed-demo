@@ -11,6 +11,7 @@
 #######################################################################################################################
 
     #- name: Install cockpit using redhat.rhel_system_roles collection
+    
 
 ################################################# INSTRUCTIONS TASK 2 #################################################
 # Uncomment the line just after this instructions block and Press "ENTER" at the end.
@@ -20,6 +21,7 @@
 #######################################################################################################################
 
     #- name: Copy cockpit.conf.j2 to /etc/cockpit
+ 
 
 ############################################## INSTRUCTIONS TASK 3 and 4 ##############################################
 # Press "ENTER" at the end of the multi-task prompt line just after this instructions block. DO NOT UNCOMMENT THE LINE.
